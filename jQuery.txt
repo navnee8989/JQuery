@@ -1,0 +1,112 @@
+	JQuery Basic, Effects & Advance
+
+1.what is JQuery?
+
+==>jQuery is a lightweight, "write less, do more", JavaScript library.
+
+The purpose of jQuery is to make it much easier to use JavaScript on your website.
+
+jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+
+jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+
+The jQuery library contains the following features:
+
+    HTML/DOM manipulation
+    CSS manipulation
+    HTML event methods
+    Effects and animations
+    AJAX
+    Utilities
+
+
+2.How to Apply CSS Using JQuery, How to Add Class and Remove Class in JQuery,
+JQuery Animation?
+
+==>jQuery has several methods for CSS manipulation. We will look at the following methods:
+
+   1. addClass() - Adds one or more classes to the selected elements
+			example
+$("button").click(function(){
+  $("p:first").addClass("intro");
+});
+
+
+ 2.   removeClass() - Removes one or more classes from the selected elements
+
+			example
+$("button").click(function(){
+  $("p:first").remove("intro");
+});
+
+
+3.    toggleClass() - Toggles between adding/removing classes from the selected elements
+
+		example
+$("button").click(function(){
+  $("p").toggleClass("main");
+});
+
+
+    css() - Sets or returns the style attribute
+
+syntex:-css("propertyname");
+example:-$("p").css("background-color");
+
+
+		ANIMATION
+
+The animate() method performs a custom animation of a set of CSS properties.
+
+This method changes an element from one state to another with CSS styles. The CSS property value is changed gradually, to create an animated effect.
+
+Only numeric values can be animated (like "margin:30px"). String values cannot be animated (like "background-color:red"), except for the strings "show", "hide" and "toggle". These values allow hiding and showing the animated element.
+
+Tip: Use "+=" or "-=" for relative animations.
+
+syntex:-(selector).animate({styles},speed,easing,callback)
+
+
+
+3.How to create slider with animation?
+
+jQuery UI consists of GUI widgets, visual effects, and themes implemented using jQuery, CSS, and HTML. jQuery UI is great for building UI interfaces for the webpages. jQueryUI provides us a slider control through the slider widget. Slider helps us to get a certain value using a given range. In this article, we will see how to animate a slider. The animate option when set to true will create an animation effect when you directly click at any point on the slider’s axis
+
+Syntax:
+
+$(".selector").slider(
+   { animate: value }
+);
+
+Parameters: This option accepts three parameters as discussed below:
+
+    boolean: If set to true, the slider will be animated. By default, the value is false
+    string: The string value used to set the speed of the slider cursor. The available values are slow, normal, fast.
+    number: The duration of the animation in milliseconds.
+
+example:-<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link href=
+"https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+	rel="stylesheet"/>
+	<script src=
+"https://code.jquery.com/jquery-1.10.2.js">
+	</script>
+	<script src=
+"https://code.jquery.com/ui/1.10.4/jquery-ui.js">
+	</script>
+	<script>
+	$(function () {
+		$("#gfg").slider({ animate: true });
+	});
+	</script>
+</head>
+
+<body>
+	<h1>GeeksforGeeks</h1>
+	<h2>jQuery UI | slider animate option</h2>
+	<div id="gfg"></div>
+</body>
+</html>
